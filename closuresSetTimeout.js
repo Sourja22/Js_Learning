@@ -29,6 +29,13 @@ function a(){
         },i*1000);
     }
 }
-a();
+a();//Demo b
 
 //this will print 6,6,6,6,6(since var is function scoped, the memory allotment is once only and by the time console.log happens the value is set to 6)
+
+
+
+
+
+
+
