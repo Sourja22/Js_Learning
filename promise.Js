@@ -36,4 +36,21 @@ b()
  //catch will handle all the errors occuring in the top 'then' . But the then below it will get executed.
  
  
-  
+
+ //Passing value deep into the promise chain
+ function prom(){
+    return new Promise((resolve,reject)=>{
+        console.log('hi');
+        resolve(101);
+    })
+}
+
+function b(res){
+    console.log(res+' into b');
+}
+
+ prom()
+    .then((res)=>{
+        return res;
+    })
+    .then((res)=> b(res)); // or .then(b)
